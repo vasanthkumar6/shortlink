@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <!-- instead of spacer use margin classes here -->
+    <!--  line no's 4 ,8,13,17,24, -->
+    <div class="spacer-sm"></div>  
+
+    <div class="container">
+
+        <div class="spacer-sm"></div>
+
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-5">
+
+                <div class="spacer-lg"></div>
+
+                <h2 class="display-3 text-center">ShortLinks.</h2>
+
+                <div class="spacer-sm"></div>
+
+                <p class="ptag">One Simple Url shortening App to save lots of Time.</p>
+                <button class="btn btn-lg btn-primary p-3 m-2">Get Started</button>
+            </div>
+            <div class="col-md-5">
+
+                <div class="spacer-md"></div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title text-center text-muted">Give it a Try</h2>
+                        <form #ref="ngForm" (ngSubmit)="url(ref.value);ref.reset()">
+                            <div class="form-group">
+                                <label>Enter Any Url of your wish to shorten.</label>
+                                <input type="text" class="form-control col" placeholder="Url Here..." name="fullUrl" ngModel>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-sm" type="submit"> Shorten </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <button>click to sell shortend links</button> -->
+<div class="row">
+    <div class="offset-4 col-md-4"><div class="table table-striped">
+        <thead>
+            <th>shortUrl</th>
+            <th>clicks</th>
+            <!-- <th></th> -->
+        </thead>
+        <tr *ngFor="let v of output">
+            <td><a href="">{{v.shortUrl}}</a></td>
+            <td>{{v.clicks}}</td>
+            <!-- <td></td> -->
+        </tr>
+        </div>
+    </div>
+</div>

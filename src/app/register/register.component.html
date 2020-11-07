@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="card col-md-4 mx-auto shadow" style="margin-top: 80px;">
+        <div class="card-header">
+            <h1>Register Form</h1>
+        </div>
+        <div class="card-body" >
+            <form #ref="ngForm" (ngSubmit)="registerData(ref.value)">
+                <div class="form-group">
+                    <label for="fn">First Name</label>
+                    <input type="text" id="fn" name="firstname" class="form-control" #ref1="ngModel" required ngModel>
+                    <div *ngIf="ref1.invalid&&(ref1.touched||ref1.dirty) " class="alert alert-dange">
+                        <div *ngIf="ref1.errors.required">*Mandatory Field</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ln">Last Name</label>
+                    <input type="text" id="ln" name="lastname" class="form-control" #ref2="ngModel" required ngModel>
+                    <div *ngIf="ref2.invalid&&(ref2.touched||ref2.dirty)" class="alert alert-danger">
+                        <div *ngIf="ref2.errors.required">*Mandatory Field</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" name="email" class="form-control" #ref3="ngModel" required ngModel>
+                    <div *ngIf="ref3.invalid&&(ref3.touched||ref3.dirty)" class="alert alert-danger">
+                        <div *ngIf="ref3.errors.required">*Mandatory Field</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="password" #ref4="ngModel" required class="form-control" ngModel>
+                    <div *ngIf="ref4.invalid&&(ref4.touched||ref4.dirty)" class="alert alert-danger">
+                        <div *ngIf="ref4.errors.required">*Mandatory Field</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary form-control" type="submit" [disabled]="ref">Login</button>
+                </div>
+            </form>
+        </div>
+        </div>
+      
+    </div>
+    
+
+
+
+    <!-- <button class="btn btn-danger" (click)="activate()">ACTIVATE</button>
+    "<a href="http://localhost:5000/#/activate">Activate</a>" -->

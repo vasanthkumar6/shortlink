@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* background-color: #fafbfc; */
+    box-sizing: border-box;
+}
+/* spacing styles */
+
+.spacer-xs {
+    padding: .25rem;
+}
+
+.spacer-sm {
+    padding: .5rem;
+}
+
+.spacer-md {
+    padding: 1rem;
+}
+
+.spacer-lg {
+    padding: 2rem;
+}
+
+/* https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap' */
